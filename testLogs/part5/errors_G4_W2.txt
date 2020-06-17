@@ -1,0 +1,12 @@
+
+
+#### Checking accelerated search ####
+
+
+Initial State: {'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+
+Plan
+[['moveTo', 'cupboard'], ['changeState', 'cupboard', 'open'], ['moveTo', 'banana'], ['pick', 'banana'], ['moveTo', 'box'], ['drop', 'box'], ['moveTo', 'cupboard'], ['changeState', 'cupboard', 'open'], ['moveTo', 'fridge'], ['changeState', 'fridge', 'open'], ['moveTo', 'apple'], ['pick', 'apple'], ['moveTo', 'fridge'], ['drop', 'fridge'], ['moveTo', 'orange'], ['pick', 'orange'], ['moveTo', 'cupboard'], ['drop', 'cupboard'], ['moveTo', 'cupboard'], ['changeState', 'cupboard', 'close'], ['moveTo', 'fridge'], ['changeState', 'fridge', 'close']]
+
+Final State
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'cupboard'), ('banana', 'box')], 'on': [('apple', 'fridge'), ('orange', 'cupboard'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}

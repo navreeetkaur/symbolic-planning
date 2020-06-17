@@ -1,0 +1,1520 @@
+
+
+#### Testing Check Action ####
+
+
+
+#### Testing Change State ####
+
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table2'), ('banana', 'table2'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'orange', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'orange', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'orange', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'orange', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'orange', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'orange', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'orange', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'orange', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box'), ('banana', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'box'), ('orange', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box', 'apple', 'orange']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [], 'on': [('apple', 'table2'), ('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge')], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [], 'on': [('orange', 'table'), ('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2'), ('apple', 'table')], 'close': ['table', 'tray']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['table', 'tray']}
+Original action
+['drop', 'table']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'box')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['box']}
+Original action
+['drop', 'box']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'cupboard'), ('banana', 'cupboard')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'banana', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'banana', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'banana', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'banana', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'banana', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'banana', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'banana', 'apple']}
+Original state
+{'grabbed': 'orange', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'banana', 'apple']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original state
+{'grabbed': 'banana', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original action
+['drop', 'fridge']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original state
+{'grabbed': '', 'fridge': 'Close', 'cupboard': 'Close', 'inside': [('apple', 'fridge'), ('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'apple', 'orange', 'banana']}
+Original action
+['changeState', 'fridge', 'open']
+
+ERROR: incorrect final state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': []}
+True state
+{'grabbed': '', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge'), ('apple', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original state
+{'grabbed': 'apple', 'fridge': 'Open', 'cupboard': 'Close', 'inside': [('orange', 'fridge'), ('banana', 'fridge')], 'on': [('tray', 'table'), ('tray2', 'table2')], 'close': ['fridge', 'orange', 'banana']}
+Original action
+['drop', 'fridge']
